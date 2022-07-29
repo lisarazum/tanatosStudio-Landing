@@ -1,0 +1,64 @@
+.burger {
+  position: relative;
+  border: none;
+  padding: 0;
+  width: var(--burger-width);
+  height: var(--burger-height);
+  color: var(--white-color);
+  background-color: transparent;
+  cursor: pointer;
+  transition: color .3s ease-in-out;
+
+  @include for-desktop {
+    &:hover {
+      color: var(--orange-color);
+    }
+  }
+
+  &__line {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    width: 100%;
+    height: var(--burger-line-height);
+    background-color: currentColor;
+    transform: translateY(-50%);
+    transition: transform 0.3s ease-in-out;
+
+    &:first-child {
+      margin-top: -7px;
+    }
+
+    &:last-child {
+      margin-top: 7px;
+    }
+  }
+}
+
+.burger-close {
+  display: none;
+  position: absolute;
+  top: 40px;
+  right: 20.3%;
+  display: inline-block;
+  width: var(--burger-width);
+  height: var(--burger-height);
+  color: var(--white-color);
+  background-color: transparent;
+  z-index: 3;
+  cursor: pointer;
+
+  &__line {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: var(--burger-line-height);
+    transform: rotate(138deg);
+    background-color: currentColor;
+
+    &:last-child {
+      transform: rotate(-138deg);
+    }
+  }
+}

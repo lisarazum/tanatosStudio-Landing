@@ -1,0 +1,46 @@
+.social {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &__item {
+    &:not(:last-child) {
+      margin-right: 20px;
+    }
+  }
+
+  &__link {
+    display: inline-block;
+    width: 43px;
+    height: 43px;
+    background-repeat: no-repeat;
+    transition: transform .3s ease-in-out;
+
+    &--fb {
+      background-image: url('../img/fb.png');
+    }
+
+    &--tw {
+      background-image: url('../img/tw.png');
+    }
+
+    &--google {
+      background-image: url('../img/google.png');
+    }
+
+    &--soc4 {
+      background-image: url('../img/social-4.png');
+    }
+
+    &--soc5 {
+      background-image: url('../img/social-5.png');
+    }
+
+    @include for-desktop {
+      &:hover,
+      &:active {
+        transform: scale(1.2);
+      }
+    }
+  }
+}

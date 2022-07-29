@@ -1,0 +1,145 @@
+.form {
+  padding-top: 97px;
+  padding-bottom: 144px;
+  background-color: var(--blue-color);
+  background-image: url('../img/form-back.jpg');
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+
+  @include mobile {
+    padding-top: 80px;
+    padding-bottom: 50px;
+  }
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__title {
+    margin: 0;
+    margin-bottom: 16px;
+    font-size: 35px;
+    font-weight: 600;
+    text-transform: uppercase;
+    text-align: center;
+    color: var(--white-color);
+
+    & span {
+      color: var(--orange-color);
+    }
+  }
+
+  &__paragraph {
+    margin: 0;
+    margin: 0 auto;
+    margin-bottom: 98px;
+    width: 40%;
+    font-size: 16px;
+    line-height: 30px;
+    font-weight: 400;
+    color: var(--white-color);
+    text-align: center;
+
+    @include small-tablet {
+      width: 70%;
+      text-align: center;
+    }
+
+    @include mobile {
+      margin-bottom: 60px;
+      width: 100%;
+    }
+  }
+
+  &__form {
+    min-width: 843px;
+
+    @include mobile {
+      min-width: 100%;
+    }
+  }
+
+  &__label {
+    display: inline-block;
+    width: 49%;
+
+    &:first-child {
+      margin-right: 12px;
+
+      @include mobile {
+        margin-right: 0;
+      }
+    }
+
+    &--text {
+      width: 100%;
+    }
+
+    @include mobile {
+      width: 100%;
+    }
+  }
+
+  &__input {
+    margin-bottom: 30px;
+    padding: 20px;
+    width: 100%;
+    height: 50px;
+    font-size: 16px;
+    line-height: 40px;
+    color: var(--black-color);
+    background-color: var(--white-color);
+    border-radius: 10px;
+
+    &--text {
+      position: relative;
+      margin-bottom: 25px;
+      width: 100%;
+      height: 206px;
+      resize: none;
+
+      &::placeholder {
+        position: absolute;
+        top: 8px;
+        left: 20px;
+      }
+    }
+
+    &::placeholder {
+      color: var(--blue-color);
+    }
+
+    @include small-tablet {
+      min-width: 46.8%;
+    }
+
+    @include mobile {
+      min-width: 100%;
+    }
+  }
+
+  &__btn {
+    display: inline-block;
+    margin-right: auto;
+    width: 217px;
+
+    @include mobile {
+      margin-bottom: 30px;
+      margin-left: auto;
+    }
+  }
+
+  &__contact {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+    @include mobile {
+      flex-direction: column;
+    }
+  }
+}

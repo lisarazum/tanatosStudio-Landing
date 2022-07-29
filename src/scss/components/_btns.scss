@@ -1,0 +1,55 @@
+.btn {
+  &--transparrent {
+    padding: 17px;
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--white-color);
+    background-color: transparent;
+    border: 1px solid #65696d;
+    border-radius: 10px;
+    text-transform: uppercase;
+    transition: background-color .3s ease-in-out, border-color .3s ease-in-out;
+
+    &:active {
+      background-color: #963a08;
+    }
+
+    @include for-desktop {
+      &:focus,
+      &:hover {
+        background-color: var(--orange-color);
+        border-color: var(--orange-color);
+      }
+    }
+  }
+
+  &--grey {
+    color: var(--blue-color);
+  }
+
+  &--orange {
+    padding: 17px;
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--white-color);
+    background-color: var(--orange-color);
+    border: 1px solid transparent;
+    border-radius: 10px;
+    text-transform: uppercase;
+    transition: background-color .3s ease-in-out, border-color .3s ease-in-out;
+
+    &:active {
+      background-color: var(--white-color);
+      color: var(--blue-color);
+    }
+
+    @include for-desktop {
+      &:focus,
+      &:hover {
+        background-color: var(--blue-color);
+        border-color: var(--blue-color);
+      }
+    }
+  }
+
+}
